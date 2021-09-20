@@ -9,7 +9,11 @@ guesses = 0
 print("Guess a number between 1 and 100\n")
 
 while userGuess != randNum:
-    userGuess = int(input("Enter your Guess: "))
+    try :
+        userGuess = int(input("Enter your Guess: "))
+    except :
+        print("Invalid input, Please enter Integer Values only.")
+        continue
     guesses += 1
     if userGuess == randNum:
         print("You guesses it right!")
